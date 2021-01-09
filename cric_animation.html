@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Animation</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .field img{
+            width: 400px;
+        }
+        .ball{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .bat{
+            transition: transform .2s;
+        }
+        .field:hover .bat{
+            transform: rotate(-60deg);
+            transform-origin: 100% 0%;
+        }
+        @keyframes ballIn {
+            0%{
+                right: 0;
+            }
+            100%{
+                right: 788px;
+                top: 440px;
+            }
+        }
+
+        .field:hover .ball{
+            animation: ballIn .2s ease-in-out 0s infinite alternate ;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="field">
+        <img class="bat" src="cricket_bat.jpg" alt="">
+        <div class="ball">
+
+        </div>
+    </div>
+</body>
+</html>
